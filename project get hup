@@ -1,0 +1,124 @@
+#we make a list of the 16 number as 16 square
+z=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16']
+#we build the table that have the 16 square by def function
+def board():
+    print('____________________')
+    print('|',z[0],'|',z[1],'|',z[2],'|',z[3], '|')
+    print('___________________')
+    print('|', z[4], '|', z[5], '|', z[6], '|', z[7], '|')
+    print('_____________________')
+    print('|', z[8], '|', z[9], '|', z[10], '|', z[11], '|')
+    print('______________________')
+    print('|', z[12], '|', z[13], '|', z[14], '|', z[15], '|')
+    print('______________________')
+print(board())
+# we ask the first player for the first and second number to make a rectangle
+x = int(input('first player enter the first number: '))
+y = int(input('first player enter the second number: '))
+#we check that the number that he write is in the 16 number of squares and the number isnt equal to each other or not in secuance
+while str(x) not in z or str(y) not in z or y==x or y-x!=1 and y-x!=4 and  x-y!=1 and x-y!=4 or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+    print('wrong try again')
+    x = int(input('first player enter the first number: '))
+    y = int(input('first player enter the second number: '))
+#we check that the two number that he/she choose is above each other or next to each other or not
+if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 :
+    # change the two number to string to change it to x and return to build the table with the x
+    x = str(x)
+    y = str(y)
+    z[z.index(x)] = 'x'
+    z[z.index(y)] = 'x'
+    print(board())
+    # we continue to make this function for the two players for a maney times
+    x = int(input('second player enter the first number: '))
+    y = int(input('second player enter the second number: '))
+    # make sure that the number is not x
+    while str(x) not in z or str(y) not in z or y==x or y-x!=1 and y-x!=4 and  x-y!=1 and x-y!=4  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+        print('wrong try again')
+        x = int(input('second player enter the first number: '))
+        y = int(input('second player enter the second number: '))
+    if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+        x = str(x)
+        y = str(y)
+        z[z.index(x)] = 'x'
+        z[z.index(y)] = 'x'
+        print(board())
+        x = int(input('first player enter the first number: '))
+        y = int(input('first player enter the second number: '))
+        while str(x) not in z or str(y) not in z or y==x or y-x!=1 and y-x!=4 and  x-y!=1 and x-y!=4  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+            print('wrong try again')
+            x = int(input('first player enter the first number: '))
+            y = int(input('first player enter the second number: '))
+
+        if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+            x = str(x)
+            y = str(y)
+            z[z.index(x)] = 'x'
+            z[z.index(y)] = 'x'
+            print(board())
+            x = int(input('second player enter the first number: '))
+            y = int(input('second player enter the second number: '))
+            while str(x) not in z or str(y) not in z or y==x or y-x!=1 and y-x!=4 and  x-y!=1 and x-y!=4  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+                print('wrong try again')
+                x = int(input('second player enter the first number: '))
+                y = int(input('second player enter the second number: '))
+            if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+                x = str(x)
+                y = str(y)
+                z[z.index(x)] = 'x'
+                z[z.index(y)] = 'x'
+                print(board())
+                x = int(input('first player enter the first number: '))
+                y = int(input('first player enter the second number: '))
+                while str(x) not in z or str(y) not in z or y==x or y-x!=1 and y-x!=4 and  x-y!=1 and x-y!=4  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+                    print('wrong try again')
+                    x = int(input('first player enter the first number: '))
+                    y = int(input('first player enter the second number: '))
+                if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+                    x = str(x)
+                    y = str(y)
+                    z[z.index(x)] = 'x'
+                    z[z.index(y)] = 'x'
+                    print(board())
+                    x = int(input('second player enter the first number: '))
+                    y = int(input('second player enter the second number: '))
+                    while str(x) not in z or str(y) not in z or y==x or y-x!=1 and y-x!=4 and  x-y!=1 and x-y!=4  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+                        print('wrong try again')
+                        x = int(input('second player enter the first number: '))
+                        y = int(input('second player enter the second number: '))
+                    if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+                        x = str(x)
+                        y = str(y)
+                        z[z.index(x)] = 'x'
+                        z[z.index(y)] = 'x'
+                        print(board())
+                        x = int(input('first player enter the first number: '))
+                        y = int(input('first player enter the second number: '))
+                        if y != x + 1 and  y != x + 4 and y != x - 1 and y != x - 4 :
+                            print('the second is the winner')
+                        else:
+                            while str(x) not in z or str(y) not in z or y == x or y - x != 1 and y - x != 4 and x - y != 1 and x - y != 4  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+                                print('wrong try again')
+                                x = int(input('first player enter the first number: '))
+                                y = int(input('first player enter the second number: '))
+                            if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+                                x = str(x)
+                                y = str(y)
+                                z[z.index(x)] = 'x'
+                                z[z.index(y)] = 'x'
+                                print(board())
+                                x = int(input('second player enter the first number: '))
+                                y = int(input('second player enter the second number: '))
+                                while str(x) not in z or str(y) not in z  or x==4 and y==5 or x==8 and y==9or x==12 and y==13 or y==4 and x==5 or y==8 and x==9 or y==12 and x==13:
+                                    print('wrong try again')
+                                    x = int(input('second player enter the first number: '))
+                                    y = int(input('second player enter the second number: '))
+                                if y == x + 1 or y == x + 4 or y == x - 1 or y == x - 4 and x and y in range(1, 17):
+                                    x = str(x)
+                                    y = str(y)
+                                    z[z.index(x)] = 'x'
+                                    z[z.index(y)] = 'x'
+                                    print(board())
+                                    # if the squares have been ended with all as x so the second is the winner if not so the first is the winner
+                                    print('the second is the winner')
+                                else:
+                                    print('the first is the winner')
